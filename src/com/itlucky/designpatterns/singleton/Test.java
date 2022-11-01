@@ -15,7 +15,7 @@ public class Test {
 
 // 9999999
 
-// branch1分支做了修改  master add test ~~
+// branch1分支做了修改  master add test ~~测试修改同一个地方发生冲突by branch-1
 //
 //class DoubleCK {
 //
