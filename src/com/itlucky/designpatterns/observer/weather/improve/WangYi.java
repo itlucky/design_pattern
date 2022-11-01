@@ -1,0 +1,82 @@
+package com.itlucky.designpatterns.observer.weather.improve;
+
+public class WangYi implements Observer{
+
+    // 温度
+    private float temperature;
+
+    // 湿度
+    private float humidity;
+
+    //气压
+    private float pressure;
+
+    @Override
+    public void update(float temperature, float humidity, float pressure) {
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+
+        show();;
+    }
+
+    private void show(){
+        System.out.println("===网易接入数据显示：===气温：" + this.temperature);
+        System.out.println("===网易接入数据显示：===湿度：" + this.humidity);
+        System.out.println("===网易接入数据显示：===气压：" + this.pressure);
+    }
+
+    /**
+     * 取得temperature的值
+     *
+     * @return temperature 的值
+     */
+    public float getTemperature() {
+        return temperature;
+    }
+
+    /**
+     * 设定temperature的值
+     *
+     * @param temperature 设定值
+     */
+    public void setTemperature(float temperature) {
+        this.temperature = temperature;
+    }
+
+    /**
+     * 取得humidity的值
+     *
+     * @return humidity 的值
+     */
+    public float getHumidity() {
+        return humidity;
+    }
+
+    /**
+     * 设定humidity的值
+     *
+     * @param humidity 设定值
+     */
+    public void setHumidity(float humidity) {
+        this.humidity = humidity;
+    }
+
+    /**
+     * 取得pressure的值
+     *
+     * @return pressure 的值
+     */
+    public float getPressure() {
+        return pressure;
+    }
+
+    /**
+     * 设定pressure的值
+     *
+     * @param pressure 设定值
+     */
+    public void setPressure(float pressure) {
+        this.pressure = pressure;
+    }
+}
